@@ -461,26 +461,17 @@ public struct JSONParser {
                 parser.parseLeadingZero()
 
             case .preDecimalDigits:
-                let parserStart = parser.start
+                let start = parser.start
                 try parser.parsePreDecimalDigits { c in
-
-                    let (exponent, overflow1) = 10.multipliedReportingOverflow(by: value)
-                    if overflow1 {
-                        throw InternalError.numberOverflow(offset: parserStart)
+                    
+                    guard case (let exponent, noOverflow) = 10.multipliedReportingOverflow(by: value) else {
+                        throw InternalError.numberOverflow(offset: start)
                     }
-                    let (newValue, overflow2) = exponent.addingReportingOverflow(Int(c - Literal.zero))
-                    if overflow2 {
-                        throw InternalError.numberOverflow(offset: parserStart)
+                    
+                    guard case (let newValue, noOverflow) = exponent.addingReportingOverflow(Int(c - Literal.zero)) else {
+                        throw InternalError.numberOverflow(offset: start)
                     }
-
-//                    guard case let (exponent, .none) = 10.multipliedReportingOverflow(by: value) else {
-//                        throw InternalError.numberOverflow(offset: parserStart)
-//                    }
-//
-//                    guard case let (newValue, .none) = exponent.addingReportingOverflow(Int(c - Literal.zero)) else {
-//                        throw InternalError.numberOverflow(offset: parserStart)
-//                    }
-
+                    
                     value = newValue
                 }
 
@@ -497,13 +488,9 @@ public struct JSONParser {
             }
         }
 
-        let (signedValue, overflow) = sign.rawValue.multipliedReportingOverflow(by: value)
-        if overflow {
+        guard case (let signedValue, noOverflow) = sign.rawValue.multipliedReportingOverflow(by: value) else {
             throw InternalError.numberOverflow(offset: parser.start)
         }
-//        guard case let (signedValue, .none) = sign.rawValue.multipliedReportingOverflow(by: value) else {
-//            throw InternalError.numberOverflow(offset: parser.start)
-//        }
 
         loc = parser.loc
         return .int(signedValue)
