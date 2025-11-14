@@ -39,6 +39,8 @@ private func ==(lhs: JSONParser.Error, rhs: JSONParser.Error) -> Bool {
         return lOffset == rOffset
     case (_, _):
         return false
+    default:
+        fatalError()
     }
 }
 

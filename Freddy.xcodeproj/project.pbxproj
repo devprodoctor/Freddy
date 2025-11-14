@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -473,8 +473,9 @@
 		DB6ADF161C23610B00D77BF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 2610;
 				ORGANIZATIONNAME = "Big Nerd Ranch";
 				TargetAttributes = {
 					DB6ADF1E1C23610B00D77BF1 = {
@@ -506,11 +507,11 @@
 			};
 			buildConfigurationList = DB6ADF191C23610B00D77BF1 /* Build configuration list for PBXProject "Freddy" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = DB6ADF151C23610B00D77BF1;
 			productRefGroup = DB6ADF201C23610B00D77BF1 /* Products */;
@@ -746,6 +747,7 @@
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -767,6 +769,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
@@ -779,7 +782,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -794,7 +796,6 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -807,7 +808,6 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Debug;
@@ -817,7 +817,6 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Release;
@@ -828,7 +827,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -842,7 +840,6 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -854,7 +851,6 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
@@ -864,7 +860,6 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Release;
@@ -875,7 +870,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				TARGETED_DEVICE_FAMILY = 3;
@@ -889,7 +883,6 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				TARGETED_DEVICE_FAMILY = 3;
@@ -901,7 +894,6 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 			};
 			name = Debug;
 		};
@@ -910,7 +902,6 @@
 			baseConfigurationReference = DB6ADF831C23617500D77BF1 /* Tests.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/FreddyTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 			};
 			name = Release;
 		};
@@ -920,7 +911,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				TARGETED_DEVICE_FAMILY = 4;
@@ -934,7 +924,6 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_MODULE_VERIFIER = YES;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++11";
 				TARGETED_DEVICE_FAMILY = 4;

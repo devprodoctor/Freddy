@@ -599,12 +599,12 @@ public struct JSONParser {
     }
 
     private func detectingFloatingPointErrors<T>(start loc: Int, _ f: () throws -> T) throws -> T {
-        let flags: Int32 = FE_UNDERFLOW | FE_OVERFLOW
-        feclearexcept(flags)
+        
         let value = try f()
-        guard fetestexcept(flags) == 0 else {
+        guard let float = value as? (any FloatingPoint), float.isFinite else {
             throw InternalError.numberOverflow(offset: loc)
         }
+        
         return value
     }
 }
